@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/catHomeFragment">
+
+    <fragment
+        android:id="@+id/catHomeFragment"
+        android:name="com.example.catbook.ui.CatHomeFragment"
+        android:label="CatHomeFragment" >
+        <action
+            android:id="@+id/action_catHomeFragment_to_catImageFragment"
+            app:destination="@id/catImageFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/catImageFragment"
+        android:name="com.example.catbook.ui.CatImageFragment"
+        android:label="CatImageFragment" >
+        <argument
+            android:name="breedId"
+            app:argType="string[]"
+            app:nullable="true" />
+    </fragment>
+</navigation>

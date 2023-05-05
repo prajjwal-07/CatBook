@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_base_1"
+    android:padding="@dimen/dp_16">
+
+    <CheckBox
+        android:id="@+id/check_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/breed_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:textColor="@color/dark_text_primary"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintStart_toEndOf="@+id/check_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Abyssinian" />
+
+    <ImageView
+        android:id="@+id/location_icon"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:src="@drawable/location_icon_com"
+        app:layout_constraintStart_toEndOf="@+id/check_btn"
+        app:layout_constraintTop_toBottomOf="@+id/breed_name" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_8"
+        android:textColor="@color/light_text_secondary"
+        android:textSize="@dimen/small12_size"
+        app:layout_constraintStart_toEndOf="@+id/location_icon"
+        app:layout_constraintTop_toBottomOf="@+id/breed_name"
+        tools:text="India" />
+
+    <TextView
+        android:id="@+id/sub_title"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textSize="@dimen/small12_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/check_btn"
+        app:layout_constraintTop_toBottomOf="@+id/location_icon"
+        tools:text="Active, Energetic, Independent, Intelligent, Gentle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
