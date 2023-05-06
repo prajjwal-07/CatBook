@@ -7,6 +7,6 @@ data class CatImageRemoteData(
     val breeds: List<CatBreedRemoteData>?,
     val id: String?,
     val url: String?,
-    val width: Long?,
-    val height: Long?,
+    val width: Long? = null,
+    val height: Long? = null,
 )

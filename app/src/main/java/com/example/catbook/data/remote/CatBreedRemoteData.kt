@@ -10,14 +10,14 @@ data class CatBreedRemoteData(
     val temperament: String?,
     val origin: String?,
     @Json(name = "country_codes")
-    val countryCodes: String?,
-    val description: String?,
+    val countryCodes: String? = null,
+    val description: String? = null,
     @Json(name = "life_span")
-    val lifeSpan: String?,
+    val lifeSpan: String? = null,
     @Json(name = "wikipedia_url")
-    val wikipediaUrl: String?,
+    val wikipediaUrl: String? = null,
     @Json(name = "image")
-    val catImage: CatImage?,
+    val catImage: CatImage? = null,
 )
 
 @JsonClass(generateAdapter = true)
